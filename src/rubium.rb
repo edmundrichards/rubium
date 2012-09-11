@@ -141,19 +141,19 @@ module Rubium
     ## Fire method when document ready
     ## and all needed elements are available
     def on_ready( method )
-	  count=0
-	  begin
-	    ready=false
-	    begin
-	      self.send(method)
-	      ready = true
-	    rescue Selenium::WebDriver::Error::NoSuchElementError
-	      count+=1
-	      if count>500
-	        ready=true
-	      end
-	    end  
-	  end while not ready
+      count=0
+      begin
+        ready=false
+        begin
+          self.send(method)
+          ready = true
+        rescue Selenium::WebDriver::Error::NoSuchElementError
+          count+=1
+          if count>500
+            ready=true
+          end
+        end  
+      end while not ready
     end
     ##
     ##*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -182,19 +182,19 @@ module Rubium
     ##*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ##
     def main()
-	
-	  @utl.parse(ARGV).each do |action|
-	  
-	    @wd.navigate.to "#{action[:url]}"
-	    
-	    puts "Getting value for $('#{action[:query]}').css('#{action[:style]}')"
-	    current_value = get_calculated_style(action[:query],action[:style])
-	    
-	    puts "current #{current_value}"
-	    
-	  end
-	  
-	end
+    
+      @utl.parse(ARGV).each do |action|
+      
+        @wd.navigate.to "#{action[:url]}"
+        
+        puts "Getting value for $('#{action[:query]}').css('#{action[:style]}')"
+        
+        current_value = get_calculated_style(action[:query],action[:style])
+        puts "current #{current_value}"
+        
+      end
+      
+    end
   end
 end
 
