@@ -163,17 +163,17 @@ module Rubium
     def get_calculated_style( query, style )
       #begin assemble javascript
       script = "return jQuery('"
-	  
-	  #selector query
-	  script << "#{query}"
-	  script << "').css('"
-	  
-	  #css styles to verify
-	  script << "#{style}"
-	  script << "');"
-	  
-	  begin
-	    return @wd.execute_script("#{script}")
+      
+      #selector query
+      script << "#{query}"
+      script << "').css('"
+      
+      #css styles to verify
+      script << "#{style}"
+      script << "');"
+      
+      begin
+        return @wd.execute_script("#{script}")
 	  rescue Selenium::WebDriver::Error::JavascriptError
 	    return "Unable to obtain"
 	  end
@@ -195,7 +195,6 @@ module Rubium
 	  end
 	  
 	end
-	
   end
 end
 
