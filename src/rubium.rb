@@ -155,14 +155,14 @@ module Rubium
 	    end  
 	  end while not ready
     end
-	##
-	##*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	## Obtain the calculated style on a specifed dom node
-	## @fixme: target web application must support jQuery
-	##
-	def get_calculated_style( query, style )
-	  #begin assemble javascript
-	  script = "return jQuery('"
+    ##
+    ##*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ## Obtain the calculated style on a specifed dom node
+    ## @fixme: target web application must support jQuery
+    ##
+    def get_calculated_style( query, style )
+      #begin assemble javascript
+      script = "return jQuery('"
 	  
 	  #selector query
 	  script << "#{query}"
@@ -184,7 +184,7 @@ module Rubium
 	def main()
 	
 	  @utl.parse(ARGV).each do |action|
-
+	  
 	    @wd.navigate.to "#{action[:url]}"
 	    
 	    puts "Getting value for $('#{action[:query]}').css('#{action[:style]}')"
@@ -193,7 +193,6 @@ module Rubium
 	    puts "current #{current_value}"
 	    
 	  end
-	
 	end
   end
 end
