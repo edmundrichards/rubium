@@ -193,7 +193,9 @@ module Rubium
 	    puts "current #{current_value}"
 	    
 	  end
+	  
 	end
+	
   end
 end
 
