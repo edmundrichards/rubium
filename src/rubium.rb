@@ -174,14 +174,14 @@ module Rubium
       
       begin
         return @wd.execute_script("#{script}")
-	  rescue Selenium::WebDriver::Error::JavascriptError
-	    return "Unable to obtain"
-	  end
-	end
-	##
-	##*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	##
-	def main()
+      rescue Selenium::WebDriver::Error::JavascriptError
+        return "Unable to obtain"
+      end
+    end
+    ##
+    ##*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ##
+    def main()
 	
 	  @utl.parse(ARGV).each do |action|
 	  
