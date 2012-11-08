@@ -29,7 +29,7 @@ Use `ruby rubium.rb --help` for detailed usage instructions.
 
 ## EXAMPLES
 
-These are simple examples that show how rubium can retain the calculated CSS style on a specific DOM node. These type of tests are really helpful in particular development situations where more than one developer may unfortunantley declare different style on the same element in the DOM: Say two developers are extending an existing widget for the development of a new widget. Each developer may restyle the existing widget without the neccessary namespacing. When both of the new widgets get loaded on the same page, you can use this utility to view the definitive calculated style that is taking effect. Silly developers :)
+These are simple examples that show how rubium can retain the calculated CSS style on a specific DOM node. These type of tests are really helpful in particular development situations where more than one developer may unfortunantley declare different style on the same element in the DOM: Say two developers are extending an existing widget for the development of a new widget. Each developer may restyle the existing widget without the neccessary namespacing. When both of the new widgets get loaded on the same page, you can use this utility to view the definitive calculated style that is taking effect.
 
 Single test
 
